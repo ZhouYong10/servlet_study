@@ -74,6 +74,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>ServletSetCookie</servlet-name>
+        <servlet-class>com.study.cookie.ServletSetCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSetCookie</servlet-name>
+        <url-pattern>/set_cookie</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>ServletErrorHandler</servlet-name>
         <servlet-class>com.study.ServletErrorHandler</servlet-class>
     </servlet>
@@ -81,7 +91,6 @@
         <servlet-name>ServletErrorHandler</servlet-name>
         <url-pattern>/error_handler</url-pattern>
     </servlet-mapping>
-
 
     <error-page>
         <error-code>404</error-code>

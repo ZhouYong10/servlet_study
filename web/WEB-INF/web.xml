@@ -20,6 +20,10 @@
         <servlet-name>ServletReadParams</servlet-name>
         <servlet-class>com.study.ServletReadParams</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletDisplayHead</servlet-name>
+        <servlet-class>com.study.ServletDisplayHead</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -37,5 +41,9 @@
     <servlet-mapping>
         <servlet-name>ServletReadParams</servlet-name>
         <url-pattern>/servlet_readparams</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletDisplayHead</servlet-name>
+        <url-pattern>/display_header</url-pattern>
     </servlet-mapping>
 </web-app>

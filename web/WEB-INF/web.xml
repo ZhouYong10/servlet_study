@@ -17,54 +17,78 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+
+
     <servlet>
         <servlet-name>HelloWorld</servlet-name>
         <servlet-class>com.study.HelloWorld</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>HelloForm</servlet-name>
-        <servlet-class>com.study.HelloForm</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletCheckbox</servlet-name>
-        <servlet-class>com.study.ServletCheckbox</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletReadParams</servlet-name>
-        <servlet-class>com.study.ServletReadParams</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletDisplayHead</servlet-name>
-        <servlet-class>com.study.ServletDisplayHead</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletRefresh</servlet-name>
-        <servlet-class>com.study.ServletRefresh</servlet-class>
-    </servlet>
-
-
     <servlet-mapping>
         <servlet-name>HelloWorld</servlet-name>
         <url-pattern>/helloworld</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloForm</servlet-name>
+        <servlet-class>com.study.HelloForm</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloForm</servlet-name>
         <url-pattern>/helloform</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletCheckbox</servlet-name>
+        <servlet-class>com.study.ServletCheckbox</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletCheckbox</servlet-name>
         <url-pattern>/servlet_checkbox</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletReadParams</servlet-name>
+        <servlet-class>com.study.ServletReadParams</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletReadParams</servlet-name>
         <url-pattern>/servlet_readparams</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDisplayHead</servlet-name>
+        <servlet-class>com.study.ServletDisplayHead</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletDisplayHead</servlet-name>
         <url-pattern>/display_header</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletRefresh</servlet-name>
+        <servlet-class>com.study.ServletRefresh</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletRefresh</servlet-name>
         <url-pattern>/auto_refresh</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletErrorHandler</servlet-name>
+        <servlet-class>com.study.ServletErrorHandler</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletErrorHandler</servlet-name>
+        <url-pattern>/error_handler</url-pattern>
+    </servlet-mapping>
+
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_handler</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error_handler</location>
+    </error-page>
 </web-app>

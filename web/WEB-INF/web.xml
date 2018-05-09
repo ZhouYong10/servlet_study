@@ -16,6 +16,10 @@
         <servlet-name>ServletCheckbox</servlet-name>
         <servlet-class>com.study.ServletCheckbox</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletReadParams</servlet-name>
+        <servlet-class>com.study.ServletReadParams</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -29,5 +33,9 @@
     <servlet-mapping>
         <servlet-name>ServletCheckbox</servlet-name>
         <url-pattern>/servlet_checkbox</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletReadParams</servlet-name>
+        <url-pattern>/servlet_readparams</url-pattern>
     </servlet-mapping>
 </web-app>

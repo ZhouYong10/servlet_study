@@ -3,6 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <filter>
+        <filter-name>FilterLog</filter-name>
+        <filter-class>com.study.filter.FilterLog</filter-class>
+        <init-param>
+            <param-name>site</param-name>
+            <param-value>过滤器实例</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FilterLog</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <servlet>
         <servlet-name>HelloWorld</servlet-name>

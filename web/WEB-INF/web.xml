@@ -82,6 +82,15 @@
         <url-pattern>/set_cookie</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ServletReadCookie</servlet-name>
+        <servlet-class>com.study.cookie.ServletReadCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletReadCookie</servlet-name>
+        <url-pattern>/read_cookie</url-pattern>
+    </servlet-mapping>
+
 
     <servlet>
         <servlet-name>ServletErrorHandler</servlet-name>

@@ -26,7 +26,7 @@ public class ServletSetCookie extends HttpServlet {
 
         response.addCookie(name);
         response.addCookie(url);
-        
+
         response.setContentType("text/html;charset=utf-8");
         response.setCharacterEncoding("utf-8");
 
@@ -45,6 +45,8 @@ public class ServletSetCookie extends HttpServlet {
                 new String(request.getParameter("name").getBytes("iso8859-1"), "utf-8") + "</li>\n" +
                 "<li><b>站点 URL：</b>" + request.getParameter("url") + "</li>\n" +
                 "</ul>\n" +
+                "<p>设置 Cookie 完成</p>" +
+                "<a href=\"/read_cookie\">显示 Cookie</a>" +
                 "</body></html>");
     }
 }

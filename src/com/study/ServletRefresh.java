@@ -6,14 +6,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
-public class HelloForm extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-
-    public HelloForm() {
-        super();
-    }
-
+public class ServletRefresh extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
@@ -21,25 +18,25 @@ public class HelloForm extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // 设置响应内容类型和编码
         response.setContentType("text/html;charset=utf-8");
         response.setCharacterEncoding("utf-8");
+        response.setIntHeader("Refresh", 1);
+
+        Calendar calendar = Calendar.getInstance();
+        Date time = calendar.getTime();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String formatTime = dateFormat.format(time);
 
         PrintWriter out = response.getWriter();
-        String title = "使用GET方法读取表单数据";
-
-        // 处理中文
-        String name = new String(request.getParameter("name").getBytes("ISO8859-1"), "utf-8");
+        String title = "自动刷新 Header 设置 实例";
         String docType = "<!DOCTYPE html>\n";
+
         out.println(docType +
                 "<html>\n" +
                 "<head><title>" + title + "</title></head>\n" +
                 "<body bgcolor=\"#f0f0f0\">\n" +
                 "<h1 align=\"center\">" + title + "</h1>\n" +
-                "<ul>\n" +
-                "<li><b>站点名</b>:" + name + "</li>\n" +
-                "<li><b>网址</b>:" + request.getParameter("url") + "</li>\n" +
-                "</ul>\n" +
+                "<p>当前时间是： " + formatTime + "</p>\n" +
                 "</body></html>");
     }
 }

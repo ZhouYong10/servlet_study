@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 public class ServletSetCookie extends HttpServlet {
@@ -18,7 +19,7 @@ public class ServletSetCookie extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Cookie name = new Cookie("name", URLEncoder.encode(request.getParameter("name"), "UTF-8"));
+        Cookie name = new Cookie("name", URLEncoder.encode(request.getParameter("name"), "ISO8859-1"));
         Cookie url = new Cookie("url", request.getParameter("url"));
 
         name.setMaxAge(60 * 60 * 24);

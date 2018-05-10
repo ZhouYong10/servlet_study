@@ -93,6 +93,16 @@
 
 
     <servlet>
+        <servlet-name>ServletSession</servlet-name>
+        <servlet-class>com.study.ServletSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSession</servlet-name>
+        <url-pattern>/test_session</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>ServletErrorHandler</servlet-name>
         <servlet-class>com.study.ServletErrorHandler</servlet-class>
     </servlet>

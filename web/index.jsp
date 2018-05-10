@@ -20,5 +20,6 @@
   <a href="/display_header" target="_blank">显示请求头信息以及请求相关信息</a><br/><br/>
   <a href="/auto_refresh" target="_blank">设置响应头 Refresh ，实现自动刷新</a><br/><br/>
   <a href="./set_cookie.jsp" target="_blank">设置 Cookie 实例</a><br/><br/>
+  <a href="/test_session" target="_blank">Servlet Session 实例</a><br/><br/>
   </body>
 </html>
